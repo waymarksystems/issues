@@ -1,0 +1,53 @@
+name: Feature Request
+description: Suggest an idea or improvement
+title: "[FEATURE]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to share your ideas with us!
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      description: What product is this feature request for?
+      options:
+        - "FeaturePilot"
+        - "Ember EMR"
+        - "Adhera"
+        - "Something else"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Desired Urgency
+      description: How critical is this feature to your ongoing workflow?
+      options:
+        - "Nice-to-have (Minor improvement)"
+        - "Important (Saves significant time)"
+        - "Critical (Cannot complete key tasks without it)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the problem is (e.g., I'm always frustrated when...).
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+      placeholder: |
+        As a user, I want to be able to...
+    validations:
+      required: true
