@@ -1,0 +1,57 @@
+name: Bug Report
+description: File a bug report
+title: "[BUG]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      description: What product is this bug report for?
+      options:
+        - "FeaturePilot"
+        - "Ember EMR"
+        - "Adhera"
+        - "Something else"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Bug Severity
+      description: How severely does this bug affect your workflow?
+      options:
+        - "Low (Cosmetic/Annoyance)"
+        - "Medium (Functional workaround exists)"
+        - "High (Core application broken)"
+        - "Critical (Crash/Data loss)"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version (if known)
+      placeholder: e.g., v1.4.2
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Provide a link to a live example or list clear steps.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
