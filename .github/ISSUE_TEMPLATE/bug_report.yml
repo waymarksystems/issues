@@ -15,8 +15,9 @@ body:
       label: Product
       description: What product is this bug report for?
       options:
-        - "FeaturePilot"
         - "Ember EMR"
+        - "Ember FHIR Server"
+        - "FeaturePilot"
         - "Adhera"
         - "Something else"
     validations:
